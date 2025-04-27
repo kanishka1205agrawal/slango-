@@ -1,0 +1,262 @@
+.quiz-container {
+  font-family: "Roboto", sans-serif;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 16px;
+  display: none;
+}
+
+.quiz-container .timer {
+  font-weight: bold;
+  text-align: right;
+}
+
+.timer.danger {
+  color: red;
+}
+
+.quiz-container h2.question {
+  font-size: 20px;
+  background: #d0ecff;
+  padding: 16px;
+  border-radius: 8px;
+  font-weight: normal;
+  line-height: 1.6;
+}
+
+.quiz-container .options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.quiz-container .option {
+  border: none;
+  padding: 24px 32px;
+  font-size: 18px;
+  background: #1d3557;
+  color: #fff;
+}
+
+.quiz-container button {
+  cursor: pointer;
+}
+
+.disabled {
+  pointer-events: none;
+}
+
+.option.correct {
+  background: #51e351;
+  color: #222;
+}
+
+.option.incorrect {
+  background: #e63946;
+}
+
+.quiz-container .next-btn,
+.quiz-result .retake-btn {
+  background: #222;
+  color: #fff;
+  border: none;
+  padding: 12px 32px;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 3px;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.quiz-result {
+  display: none;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: "Roboto", sans-serif;
+  padding: 16px;
+}
+
+.quiz-result .question-container {
+  padding: 12px;
+  border: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.quiz-result .question-container.incorrect {
+  background: #e63946;
+  color: #fff;
+}
+
+.question-number {
+  font-size: 16px;
+  margin-right: 16px;
+  background: #1d3557;
+  color: #fff;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+@media (max-width: 700px) {
+  .quiz-container .options {
+    grid-template-columns: 1fr;
+  }
+}
+
+.start-btn-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  
+
+  background-image: url('/genz/img/2a.jpg');
+  background-size: cover;
+  background-position: center;
+  
+  
+  width: 100vw;
+  height: 100vh;
+  color: white;
+}
+
+.start-btn-container::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* dark overlay */
+  z-index: -1;
+}
+
+.start-btn-container h2 {
+  font-size: 40px;
+  margin: 0;
+}
+
+.start-btn-container .start-btn {
+  background: #e63946;
+  color: #fff;
+  padding: 8px 32px;
+  border-radius: 8px;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  }
+  
+  body {
+      font-family: "Roboto", sans-serif;
+      line-height: 1.4;
+  }
+  
+  a {
+      text-decoration: none;
+  }
+  
+  p {
+      margin: 0.75rem 0;
+  }
+  
+  /* Utility classes*/
+  
+  .container {
+  
+      max-width: 1100px;
+      margin: auto;
+      padding: 0 2rem;
+      overflow: hidden;
+  }
+  .text-center {
+      text-align: center;
+  }
+  
+  .text-primary {
+      color: #93cb52;
+  }
+  
+  .l-heading{
+      font-size: 6rem;
+      margin-bottom: 0.75rem;
+      line-height: 1.1;
+  }
+  
+  .m-heading{
+      font-size: 4rem;
+      margin-top:4rem ;
+      margin-bottom: 0.75rem;
+      line-height: 1.1;}
+  
+  .lead {
+      font-size: 1.3rem;
+      margin-bottom: 2rem;
+  }
+  
+  .py-1 {padding: 1.5rem 0;}
+  .py-2 {padding: 2rem 0;}
+  .py-3 {padding: 3rem 0;}
+  
+  .btn {
+      display: inline-block;
+      color: #fff;
+      background: #93cb52;
+      padding: 0.5rem 2rem;
+      border: none;
+      border-radius: 5px;
+  }
+  
+  .btn:hover {
+      background: #7ab436;
+  }
+  
+  .btn-dark {
+  background: #333;
+  color: #fff;
+  
+  }
+  
+  /* Navbar*/
+  #navbar {
+      display: flex;
+      position: sticky;
+      top: 0;
+      background: #333;
+      color: #fff;
+      justify-content: space-between;
+      z-index: 1;
+      padding: 1rem;
+  }
+  
+  #navbar ul{
+      display: flex;
+      align-items: center;
+      list-style: none;
+  }
+  
+  #navbar ul li a {
+      color: #fff;
+      padding: 0.75rem;
+      margin: 0 0.25rem;}
+  
+  #navbar ul li a:hover {
+  background: #93cb52;
+  border-radius: 5px; }
